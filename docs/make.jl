@@ -1,2 +1,3 @@
-using Documenter, Simplicial 
-makedocs()
+using Documenter, Simplicial
+
+makedocs(modules=[Simplicial])
