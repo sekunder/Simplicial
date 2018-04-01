@@ -1,6 +1,6 @@
 __precompile__(true)
-module Simplicial
-using Combinatorics, LightGraphs 
+module SimplicialDev
+using Combinatorics, LightGraphs
 import Base.in, Base.==, Base.<=, Base.show, Base.push!, Base.transpose
 import Base: start, next, done, eltype, length
 map(include,
@@ -22,14 +22,14 @@ map(include,
      "utilities/void_and_irrelevant_complexes_and_codes.jl",
      "utilities/function_AIMC_minus_C_and_link_AIMC_minus_C.jl",
      "SimplicialComplexes/FiltrationOfSimplicialComplexes.jl",
-     "HomologyComputations/PersistenceIntervals.jl", 
+     "HomologyComputations/PersistenceIntervals.jl",
      "utilities/function_show.jl", # This is a function for dysplaying the underlying objects. Currently needs to be expanded to all the types
      "plotting/PlottingFunctions.jl",
      "utilities/fvector.jl",
-     "DirectedComplexes/DirectedComplex.jl", "DirectedComplexes/Posets.jl",  "utilities/EulerCharacteristic.jl", 
-     "HomologyComputations/PHAT_interface.jl", 
+     "DirectedComplexes/DirectedComplex.jl", "DirectedComplexes/Posets.jl",  "utilities/EulerCharacteristic.jl",
+     "HomologyComputations/PHAT_interface.jl",
      "utilities/subset_of_a_sequence.jl", "utilities/IntersectionsOfSequences.jl",
-      "utilities/function_in.jl", 
+      "utilities/function_in.jl",
      ])
 export CodeWord, emptyset, TheIntegerType, PersistenceIntervalsType, SingleDimensionPersistenceIntervalsType
 export CombinatorialCode, BitArrayOfACombinatorialCode, BernoulliRandomCode, transpose, HasEmptySet, isvoid, isirrelevant, in, ==, <=

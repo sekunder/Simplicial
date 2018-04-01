@@ -1,4 +1,6 @@
-# Package Simplicial
+# SimplicialDev
+
+`SimplicialDev` is a development fork of [`Simplicial`](https://github.com/nebneuron/Simplicial), where I am fumbling through the use of Documenter.jl, Travis-CI, and the like.
 
 This package provides data structures and algorithms for combinatorial topology. Currently, it can handle   abstract simplicial complexes, directed complexes, and combinatorial codes. The package is written in [Julia language](http://julialang.org).  The long-term goal of this project is to be a *"swiss-knife"*  for manipulating (*very* *large*) combinatorial structures, with an eye towards topological data analysis.
 
@@ -7,7 +9,7 @@ This software is free under the terms of the GNU General Public License ([GPLv3]
 DISCLAIMER: This software is still in development. The documentation is currently very sparse. Use at your own risk! Please let us know if you'd like to contribute. The work was supported by the ARO award W911NF-15-1-0084.
 
 
-This package interfaces with existing TDA software for homology computations. Currently it uses the "engines" of  [PHAT](https://github.com/blazs/phat) and [Perseus](http://people.maths.ox.ac.uk/nanda/perseus/index.html).  In the future, Simplicial will interface with other TDA software as well. 
+This package interfaces with existing TDA software for homology computations. Currently it uses the "engines" of  [PHAT](https://github.com/blazs/phat) and [Perseus](http://people.maths.ox.ac.uk/nanda/perseus/index.html).  In the future, Simplicial will interface with other TDA software as well.
 
 
 # Installation:
@@ -16,7 +18,7 @@ This package interfaces with existing TDA software for homology computations. Cu
 
 `julia> Pkg.clone("https://github.com/nebneuron/Simplicial.git")`
 
-# Usage 
+# Usage
 
 `julia> using Simplicial `
 
@@ -35,11 +37,11 @@ Let's plot the Betti curves for these persistent intervals:
 `julia> PlotBettiCurves(Intervals,GraphDensity,2)`
 
 The module Simplicial defines the following types:
- * The type `CodeWord` is an alias for `Set{Int16}`. It is *always* recommended to use it instead of Set{Int}, as the exact data types may change in the future. 
+ * The type `CodeWord` is an alias for `Set{Int16}`. It is *always* recommended to use it instead of Set{Int}, as the exact data types may change in the future.
  * `CombinatorialCode` for  combinatorial codes.
  * `SimplicialComplex` for simplicial complexes.
  * `FiltrationOfSimplicialComplexes` for increasing sequences of simplicial complexes.
- 
+
 There is a number of utility constants, such as  `emptyset` (the empty set as an instance of type `CodeWord`).
 
 ## Type CombinatorialCode
@@ -60,7 +62,7 @@ Objects of this type represent simplicial complexes (V,D). They are stored as a 
 
 ## Type `FiltrationOfSimplicialComplexes`
 
-(*It's what you think it is; the description is still to be written*). 
+(*It's what you think it is; the description is still to be written*).
 
 
 ## Methods
