@@ -16,7 +16,7 @@ This package interfaces with existing TDA software for homology computations. Cu
 
 `julia> Pkg.update(); Pkg.add("Plotly")`
 
-`julia> Pkg.clone("https://github.com/nebneuron/Simplicial.git")`
+`julia> Pkg.clone("https://github.com/sekunder/SimplicialDev.jl.git")`
 
 # Usage
 
