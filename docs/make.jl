@@ -1,3 +1,7 @@
 using Documenter, Simplicial
+makedocs()
 
-makedocs(modules=[Simplicial])
+deploydocs(
+    deps = Deps.pip("mkdocs", "python-markdown-math"),
+    repo = "github.com/sekunder/Simplicial.jl.git"
+)
