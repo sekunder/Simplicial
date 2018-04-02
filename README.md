@@ -1,5 +1,8 @@
 # SimplicialDev
 
+[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://sekunder.github.io/SimplicialDev.jl/stable)
+[![](https://img.shields.io/badge/docs-latest-blue.svg)](https://sekunder.github.io/SimplicialDev.jl/latest)
+
 `SimplicialDev` is a development fork of [`Simplicial`](https://github.com/nebneuron/Simplicial), where I am fumbling through the use of Documenter.jl, Travis-CI, and the like.
 
 This package provides data structures and algorithms for combinatorial topology. Currently, it can handle   abstract simplicial complexes, directed complexes, and combinatorial codes. The package is written in [Julia language](http://julialang.org).  The long-term goal of this project is to be a *"swiss-knife"*  for manipulating (*very* *large*) combinatorial structures, with an eye towards topological data analysis.
