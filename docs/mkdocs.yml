@@ -1,7 +1,7 @@
-site_name:        Simplicial.jl
-repo_url:         https://github.com/sekunder/Simplicial.jl
-site_description: Simplicial.jl package for topological data analysis
-site_author:      Vladimir Itskov, Alex Kunin, Min-Chun Wu, et al.
+site_name:        SimplicialDev.jl
+repo_url:         https://github.com/sekunder/SimplicialDev.jl
+site_description: SimplicialDev.jl package for topological data analysis
+site_author:      Alex Kunin, Vladimir Itskov, Min-Chun Wu, et al.
 
 theme: readthedocs
 

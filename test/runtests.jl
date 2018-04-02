@@ -1,4 +1,4 @@
-using Simplicial
+using SimplicialDev
 using Base.Test
 
 C1 = CombinatorialCode([[], [1], [1,2], [2,3]])

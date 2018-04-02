@@ -1,6 +1,6 @@
-# Simplicial.jl
+# SimplicialDev.jl
 
-`Simplicial` provides types and algorithms for [Combinatorial Codes](@ref), [Simplicial Complexes](@ref), [Filtered Simplicial Complexes](@ref), and [Directed Complexes](@ref).
+`SimplicialDev` is a development fork of `Simplicial`, a package which provides types and algorithms for [Combinatorial Codes](@ref), [Simplicial Complexes](@ref), [Filtered Simplicial Complexes](@ref), and [Directed Complexes](@ref).
 
 ## Package Overview
 

@@ -1,4 +1,4 @@
-const The_Location_Of_PHAT_Executables=Pkg.dir("Simplicial")*"/src/HomologyComputations/phat/src"
+const The_Location_Of_PHAT_Executables=Pkg.dir("SimplicialDev")*"/src/HomologyComputations/phat/src"
 
 function phat_compute_betti_numbers(number_of_cells::UInt64,dimension::UInt64,A::Array{Int64,2})
     if is_linux()
@@ -54,8 +54,7 @@ function PHAT_BettiNumbers(D::DirectedComplex)::Array{Int64,1}
                  currentcellnumber+=1
              end
          end
-         println("..done."); 
+         println("..done.");
          ### finished computing the array cells
          return phat_compute_betti_numbers(convert(UInt64,Ncells),convert(UInt64,D.dim),reshape(cells, 1,length(cells)))
 end
-
