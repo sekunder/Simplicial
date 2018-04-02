@@ -1,0 +1,89 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "SimplicialDev.jl\n\n\nSimplicialDev\n is a development fork of \nSimplicial\n, a package which provides types and algorithms for \nCombinatorial Codes\n, \nSimplicial Complexes\n, \nFiltered Simplicial Complexes\n, and \nDirected Complexes\n.\n\n\n\n\nPackage Overview\n\n\n\n\nCombinatorial Codes\n\n\nAbstract Simplicial Complexes\n\n\nFinite Set Collections\n\n\nDirected Complexes\n\n\n\n\n\n\nIndex\n\n\n\n\nSimplicialDev.BitArrayOfACombinatorialCode\n\n\nSimplicialDev.CanonicalForm\n\n\nSimplicialDev.CombinatorialCode\n\n\nSimplicialDev.FiltrationOfSimplicialComplexes\n\n\nSimplicialDev.BernoulliRandomCode\n\n\nSimplicialDev.cham", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#simplicialdevjl", 
+            "text": "SimplicialDev  is a development fork of  Simplicial , a package which provides types and algorithms for  Combinatorial Codes ,  Simplicial Complexes ,  Filtered Simplicial Complexes , and  Directed Complexes .", 
+            "title": "SimplicialDev.jl"
+        }, 
+        {
+            "location": "/#package-overview", 
+            "text": "Combinatorial Codes  Abstract Simplicial Complexes  Finite Set Collections  Directed Complexes", 
+            "title": "Package Overview"
+        }, 
+        {
+            "location": "/#index", 
+            "text": "SimplicialDev.BitArrayOfACombinatorialCode  SimplicialDev.CanonicalForm  SimplicialDev.CombinatorialCode  SimplicialDev.FiltrationOfSimplicialComplexes  SimplicialDev.BernoulliRandomCode  SimplicialDev.cham", 
+            "title": "Index"
+        }, 
+        {
+            "location": "/man/combinatorialcodes/", 
+            "text": "Combinatorial Codes\n\n\nA \ncombinatorial code\n $C$ is a collection $C \\subseteq 2^{[n]}$ of \ncodewords\n, subsets of $[n] = {1,\\dots,n}$. Generally, no further structure is assumed.\n\n\nCombinatorial codes are represented using the type \nCombinatorialCode\n.\n\n\njulia\n C = CombinatorialCode([[],[1],[1,2],[2,3]]);\n\njulia\n show(C)\nThis is a code on 3 vertices: 1 2 3\nThe code consists of 4 words:\n______________________________\nemptyset\n1\n1 2\n2 3\n\n\n\n\nObjects of type \nCombinatorialCode\n are \niterable\n.\n\n\njulia\n [length(c) for c in C]\n4-element Array{Int64,1}:\n 0\n 1\n 2\n 2", 
+            "title": "Combinatorial Codes"
+        }, 
+        {
+            "location": "/man/combinatorialcodes/#combinatorial-codes", 
+            "text": "A  combinatorial code  $C$ is a collection $C \\subseteq 2^{[n]}$ of  codewords , subsets of $[n] = {1,\\dots,n}$. Generally, no further structure is assumed.  Combinatorial codes are represented using the type  CombinatorialCode .  julia  C = CombinatorialCode([[],[1],[1,2],[2,3]]);\n\njulia  show(C)\nThis is a code on 3 vertices: 1 2 3\nThe code consists of 4 words:\n______________________________\nemptyset\n1\n1 2\n2 3  Objects of type  CombinatorialCode  are  iterable .  julia  [length(c) for c in C]\n4-element Array{Int64,1}:\n 0\n 1\n 2\n 2", 
+            "title": "Combinatorial Codes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/", 
+            "text": "Abstract Simplicial Complexes\n\n\nThis package provides types for \nSimplicial Complexes\n and \nFiltered Simplicial Complexes\n.\n\n\n\n\nSimplicial Complexes\n\n\nA \nsimplicial complex\n $(V,\\Delta)$ is a finite set $V$, called the \nvertex set\n, together with a collection $\\Delta \\subseteq 2^{V}$ which is closed under subsets, i.e. if $\\sigma \\subseteq \\tau \\subseteq V$ are sets, and $\\tau \\in \\Delta$, then $\\sigma \\in \\Delta$. Typically $(V,D)$ is simply denoted $\\Delta$ as the vertex set is often understood.\n\n\nSimplicial complexes are represented by the \nSimplicialComplex\n type.\n\n\njulia\n K = SimplicialComplex([[],[1],[1,2],[2,3]]);\n\njulia\n show(K)\nA 1-dimensional simplicial complex on 3 vertices 1 2 3\nThis complex has 2 facets:\nArray{Int16,1}[Int16[1, 2], Int16[2, 3]]\n\n\n\n\nIterating over a \nSimplicialComplex\n will iterate over its \nfacets\n.\n\n\n\n\nFiltered Simplicial Complexes\n\n\nA \nfiltered simplicial complex\n $(\\Delta,f)$ is a simplicial complex $\\Delta$ together with a \nfiltration function\n $f : \\Delta \\to R$ which is monotone, i.e. if $\\sigma \\subseteq \\tau \\in \\Delta$, then $f(\\sigma) \\le f(\\tau)$. Equivalently, a filtered simplicial complex is a sequence\n\n\n\n\n\n\\Delta_0 \\subseteq \\Delta_1 \\subseteq \\cdots \\subseteq \\Delta_t\n\n\n\n\n\nof simplicial complexes.\n\n\n\n\nTypes\n\n\n#\n\n\nSimplicialDev.FiltrationOfSimplicialComplexes\n \n \nType\n.\n\n\ntype FiltrationOfSimplicialComplexes.   This is the type that we use for the increasing fitrations of simplicial complexes\n\n\nsource", 
+            "title": "Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#abstract-simplicial-complexes", 
+            "text": "This package provides types for  Simplicial Complexes  and  Filtered Simplicial Complexes .", 
+            "title": "Abstract Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#simplicial-complexes", 
+            "text": "A  simplicial complex  $(V,\\Delta)$ is a finite set $V$, called the  vertex set , together with a collection $\\Delta \\subseteq 2^{V}$ which is closed under subsets, i.e. if $\\sigma \\subseteq \\tau \\subseteq V$ are sets, and $\\tau \\in \\Delta$, then $\\sigma \\in \\Delta$. Typically $(V,D)$ is simply denoted $\\Delta$ as the vertex set is often understood.  Simplicial complexes are represented by the  SimplicialComplex  type.  julia  K = SimplicialComplex([[],[1],[1,2],[2,3]]);\n\njulia  show(K)\nA 1-dimensional simplicial complex on 3 vertices 1 2 3\nThis complex has 2 facets:\nArray{Int16,1}[Int16[1, 2], Int16[2, 3]]  Iterating over a  SimplicialComplex  will iterate over its  facets .", 
+            "title": "Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#filtered-simplicial-complexes", 
+            "text": "A  filtered simplicial complex  $(\\Delta,f)$ is a simplicial complex $\\Delta$ together with a  filtration function  $f : \\Delta \\to R$ which is monotone, i.e. if $\\sigma \\subseteq \\tau \\in \\Delta$, then $f(\\sigma) \\le f(\\tau)$. Equivalently, a filtered simplicial complex is a sequence   \n\\Delta_0 \\subseteq \\Delta_1 \\subseteq \\cdots \\subseteq \\Delta_t   of simplicial complexes.", 
+            "title": "Filtered Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#types", 
+            "text": "#  SimplicialDev.FiltrationOfSimplicialComplexes     Type .  type FiltrationOfSimplicialComplexes.   This is the type that we use for the increasing fitrations of simplicial complexes  source", 
+            "title": "Types"
+        }, 
+        {
+            "location": "/man/finitesetcollections/", 
+            "text": "Finite Set Collections\n\n\nBoth combinatorial codes and simplicial complexes are simply finite collections of subsets of a finite set. Thus, both are implemented as subtypes of the \nAbstractFiniteSetCollection\n abstract type.", 
+            "title": "Finite Set Collections"
+        }, 
+        {
+            "location": "/man/finitesetcollections/#finite-set-collections", 
+            "text": "Both combinatorial codes and simplicial complexes are simply finite collections of subsets of a finite set. Thus, both are implemented as subtypes of the  AbstractFiniteSetCollection  abstract type.", 
+            "title": "Finite Set Collections"
+        }, 
+        {
+            "location": "/man/directedcomplexes/", 
+            "text": "Directed Complexes\n\n\nA \ndirected complex\n $(V, D)$ is a finite set $V$, called the \nvertex set\n, together with a collection $D$ of \"proper sequences\" on $V$, closed under taking subsequences. A \"proper sequence\" is a a sequence $(v_1,v_2,\\dots,v_k)$ with $v_i \\in V$ and no $v_i$s repeated. The closure property says that if $s = (v_1,\\dots,v_k) \\in D$, then every subsequence of $s$ is also in $D$.", 
+            "title": "Directed Complexes"
+        }, 
+        {
+            "location": "/man/directedcomplexes/#directed-complexes", 
+            "text": "A  directed complex  $(V, D)$ is a finite set $V$, called the  vertex set , together with a collection $D$ of \"proper sequences\" on $V$, closed under taking subsequences. A \"proper sequence\" is a a sequence $(v_1,v_2,\\dots,v_k)$ with $v_i \\in V$ and no $v_i$s repeated. The closure property says that if $s = (v_1,\\dots,v_k) \\in D$, then every subsequence of $s$ is also in $D$.", 
+            "title": "Directed Complexes"
+        }, 
+        {
+            "location": "/lib/combinatorialcodes/", 
+            "text": "Combinatorial Codes\n\n\nThis is an incomplete list of methods available for manipulating \nCombinatorialCode\ns\n\n\n#\n\n\nSimplicialDev.CombinatorialCode\n \n \nType\n.\n\n\nCombinatorialCode(BinaryMatrix::BitArray{2})::CombinatorialCode This function takes a binary matrix and interprets it as a combinatorial code, so that each row is interpreted as a codeword.\n\n\nsource\n\n\n#\n\n\nSimplicialDev.BitArrayOfACombinatorialCode\n \n \nType\n.\n\n\nBitArrayOfACombinatorialCode is a different representation of a CombinatorialCode\n\n\nsource\n\n\n#\n\n\nSimplicialDev.BernoulliRandomCode\n \n \nFunction\n.\n\n\nfunction BernoulliRandomCode(N,Nwords,p)::CombinatorialCode This function creates a boolean N x Nwords matrix of i.i.d. Bernoulli entries with probalbility p and then passes the appropriate sets to the constructor of the CombinatorialCode type\n\n\nsource\n\n\n#\n\n\nSimplicialDev.CanonicalForm\n \n \nType\n.\n\n\nCanonicalForm is a type used for encoding canonical forms. It is a 1-dimensional array of pseudomonomials\n\n\nsource\n\n\n#\n\n\nSimplicialDev.cham\n \n \nFunction\n.\n\n\ncham(C, nu)\n\n\n\n\nReturns a vector of tuples \n(sigma,tau)\n such that \nlink(C, sigma, tau)\n is the full code on \nnu\n\n\nsource", 
+            "title": "lib/Combinatorial Codes"
+        }, 
+        {
+            "location": "/lib/combinatorialcodes/#combinatorial-codes", 
+            "text": "This is an incomplete list of methods available for manipulating  CombinatorialCode s  #  SimplicialDev.CombinatorialCode     Type .  CombinatorialCode(BinaryMatrix::BitArray{2})::CombinatorialCode This function takes a binary matrix and interprets it as a combinatorial code, so that each row is interpreted as a codeword.  source  #  SimplicialDev.BitArrayOfACombinatorialCode     Type .  BitArrayOfACombinatorialCode is a different representation of a CombinatorialCode  source  #  SimplicialDev.BernoulliRandomCode     Function .  function BernoulliRandomCode(N,Nwords,p)::CombinatorialCode This function creates a boolean N x Nwords matrix of i.i.d. Bernoulli entries with probalbility p and then passes the appropriate sets to the constructor of the CombinatorialCode type  source  #  SimplicialDev.CanonicalForm     Type .  CanonicalForm is a type used for encoding canonical forms. It is a 1-dimensional array of pseudomonomials  source  #  SimplicialDev.cham     Function .  cham(C, nu)  Returns a vector of tuples  (sigma,tau)  such that  link(C, sigma, tau)  is the full code on  nu  source", 
+            "title": "Combinatorial Codes"
+        }
+    ]
+}
