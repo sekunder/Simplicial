@@ -22,3 +22,8 @@ docs_dir: 'build'
 
 pages:
   - Home: index.md
+  - 'Combinatorial Codes': man/combinatorialcodes.md
+  - 'Simplicial Complexes': man/simplicialcomplexes.md
+  - 'Finite Set Collections': man/finitesetcollections.md
+  - 'Directed Complexes': man/directedcomplexes.md
+  - 'lib/Combinatorial Codes': lib/combinatorialcodes.md
