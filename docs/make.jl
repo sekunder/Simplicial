@@ -1,5 +1,5 @@
 using Documenter, SimplicialDev
-makedocs()
+makedocs(modules=[SimplicialDev])
 
 deploydocs(
     deps   = Deps.pip("mkdocs", "python-markdown-math"),
